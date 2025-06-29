@@ -28,7 +28,9 @@ const InsuranceForm = () => {
 
   setIsLoading(true);
   try {
-    const response = await axios.post('http://127.0.0.1:5000/api/get-plan', formData);
+    // New (Render live backend)
+    const response = await axios.post('https://insurance-backend-6qr4.onrender.com/api/get-plan', formData);
+
     setResult(response.data.plan);
   } catch (err) {
     console.error("❌ API Error:", err);
